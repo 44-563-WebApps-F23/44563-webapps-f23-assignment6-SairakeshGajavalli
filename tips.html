@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tips page</title>
+</head>
+<body>
+<h2>Sairakesh shows tip amounts</h2>
+<input type="number" id="baseamount" value="50">
+<label for="baseamount">Enter base amount:</label>
+<input type="number" id="tip_percent" value="15">
+<label for="tip_percent">Enter the tip percent:</label>
+<input type="button" value="Show tip" onclick="tips()">
+<div id="result"></div>
+<script>
+function tips() {
+    let baseamount = parseFloat(document.getElementById("baseamount").value);
+    let tip_percent = parseFloat(document.getElementById("tip_percent").value);
+    let myOutput = "";
+    for (var i = 0; i < 5; i++){
+        var tipamount = (baseamount * (tip_percent + i * 4)) / 100;
+        myOutput += (tip_percent + i * 4) + "% is calculated $" + tipamount.toFixed(2) + "   ;  <br> ";
+    }
+    document.getElementById("result").innerHTML = "Tips are:" + myOutput;
+    }
+</script>
+</body>
+</html> 

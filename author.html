@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-    <title>Author</title>
+    <title>My Author page</title>
  </head>
 <body>
 <h4>Author entry Sairakesh Gajavalli</h4>
@@ -40,8 +40,8 @@ function selectImage() {
         default:
             console.log('Invalid useImage value');
             break;
+        }
     }
-}
 </script>
 <script> 
 function checkAuthor (){
@@ -50,16 +50,16 @@ function checkAuthor (){
     secret_author = document.getElementById("secretauthor").value;
     guess_author = document.getElementById("guessauthor").value;
     result = document.getElementById("results");
-    if (guess_author === secret_author) {
-        good ++;
-        alert("You got it right!");
-        result.innerHTML= `Good Guesses: ${good}`;
-    }else{
-        oops++;
-        alert("Sorry");
-        result.innerHTML= `Wrong Guesses: ${oops}`;
+        if (guess_author === secret_author) {
+            good ++;
+            alert("You got it right!");
+            result.innerHTML= `Good Guesses: ${good}`;
+        }else{
+            oops++;
+            alert("Sorry");
+            result.innerHTML= `Wrong Guesses: ${oops}`;
+        }
     }
-}
 </script>
 </body>
 </html> 
