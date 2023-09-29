@@ -16,6 +16,33 @@
 <br>
 <div id="results">right/wrong</div>
 <br>
+
+<div class="image-container">
+    <img src="images/guntur.jpg" alt="Guntur" width="100" height="100" onclick="selectImage()">
+</div>
+<script>
+var useImage = 1;
+function selectImage() {
+    var imageElement = document.querySelector('.image-container img');
+    switch (useImage) {
+        case 1:
+            imageElement.src = 'images/agra.jpg';
+            useImage = 2;
+            break;
+        case 2:
+            imageElement.src = 'images/jaipur.jpg';
+            useImage = 3;
+            break;
+        case 3:
+            imageElement.src = 'images/guntur.jpg';
+            useImage = 1;
+            break;
+        default:
+            console.log('Invalid useImage value');
+            break;
+    }
+}
+</script>
 <script> 
 function checkAuthor (){
     let good = 0;
