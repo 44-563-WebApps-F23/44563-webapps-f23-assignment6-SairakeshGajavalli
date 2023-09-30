@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>checked page</title>
+ </head>
+
+<body>
+  <h2>Getting input with radio buttons and checkboxes</h2>
+  <input type="number" id="baseamount" value="50">
+  <label for="baseamount">Enter base amount:</label>
+  <input type="number" id="tip_percent" value="15">
+  <label for="tip_percent">Enter the tip percent:</label>
+  <input type="button" value="Show tip" onclick="tips()">
+  <form>
+      <label for="sum">Sum</label>
+      <input type="radio" id="sum" name="operation" value="sum" onclick="chooseOp()"><br>
+      <label for="difference">Difference</label>
+      <input type="radio" id="difference" name="operation" value="difference" onclick="chooseOp()"><br>
+      <label for="product">Product</label>
+      <input type="radio" id="product" name="operation" value="product" onclick="chooseOp()"><br>
+      <div id="result"></div>
+  </form>
+<script>
+  function chooseOp() {
+      var baseamount = parseFloat(document.getElementById("baseamount").value);
+      var tip_percent = parseFloat(document.getElementById("tip_percent").value);
+      var selectedOperation = document.querySelector('input[name="operation"]:checked').value;
+      var result;
+      switch (selectedOperation) {
+          case "sum":
+              result = baseamount + tip_percent;
+              break;
+          case "difference":
+              result = baseamount - tip_percent;
+              break;
+          case "product":
+              result = baseamount * tip_percent;
+              break;
+          default:
+              result = "Invalid operation";
+              break;
+      }
+      document.getElementById("result").innerHTML = `${selectedOperation} of ${baseamount} and ${tip_percent} is ${result}`;
+  }
+</script>
+</body>
+</html> 
