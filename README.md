@@ -2,3 +2,8 @@
 # WebApps-F23-Assignment-6
 Introduction to Java Script and DOM
 
+
+Hosted At [Link to Repo](https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-SairakeshGajavalli)<br>
+To Naviagate to [Author Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-SairakeshGajavalli/author.html)<br>
+To Naviagate to [Tips Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-SairakeshGajavalli/tips.html)<br>
+To Naviagate to [Cruise Page](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-SairakeshGajavalli/cruise.html)
