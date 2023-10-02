@@ -24,7 +24,7 @@ function tips() {
     let myOutput = "";
     for (var i = 0; i < 5; i++){
         var tipamount = (baseamount * (tip_percent + i * 4)) / 100;
-        myOutput += (tip_percent + i * 4) + "% is calculated $" + tipamount.toFixed(2) + "   ;    ";
+        myOutput += (tip_percent + i * 4) + "% is calculated $" + tipamount + "   ;    ";
     }
     document.getElementById("result1").innerHTML = "Tips are:" + myOutput;
     }

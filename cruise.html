@@ -27,16 +27,20 @@
     </div>
 </form>
 
-
 <form>
-    <label for="days">Enter the number of days</label>
-    <input type="text" id="days" name="days" value="days"><br>
-
-    <label for="price">Enter price</label>
-    <input type="text" id="price" name="price"><br>
-
-    <input type="button" class="btn btn-primary" value="Update the cruise" onclick="updateCruise()">
+    <div class="form-group">
+        <label for="days">Enter the Number of days</label>
+        <input type="text" class="form-control" id="textInput1" placeholder="Enter text 1">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="textInput2">Text Input 2</label>
+        <input type="text" class="form-control" id="textInput2" placeholder="Enter text 2">
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="processTextInputs()">Process Text Inputs</button>
 </form>
+
 
 <script>
     var my_cruise = {};
@@ -52,15 +56,5 @@
     }
 </script>
 
-
-<script>
-    function updateCruise(){
-        days=document.getElementById("days").value
-        price=document.getElementById("price").value
-        my_cruise["days"]=days;
-        my_cruise["price"]=price;
-        document.getElementById("result").innerHTML=JSON.stringify(my_cruise)
-    }
-</script>
 </body>
 </html> 
