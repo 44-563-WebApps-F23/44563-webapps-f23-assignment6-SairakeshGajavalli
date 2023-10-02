@@ -58,14 +58,23 @@ function checkAuthor (){
     var guess_author = document.getElementById("guessauthor").value;
     result = document.getElementById("results");
     if (guess_author === secret_author) {
-            good ++;
+            good++;
             alert("You got it right!");
-        }else{
-            oops++;
-            alert("Sorry");
         }
-        result.innerHTML = "Good Count: " + good + "<br>Oops Count: " + oops;
+        else{ 
+        oops++;
+        if(oops > 7){
+            document.getElementById("display").onclick=gameGuess();
+        }
+        alert("Sorry");
     }
+    result.innerHTML = "Good Count: " + good + "<br>Oops Count: " + oops;
+    }
+
+    function gameGuess()
+    {
+        alert("Sorry, ran out of guesses.");
+        }
 </script>
 </body>
 </html> 
