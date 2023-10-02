@@ -17,11 +17,11 @@
 <form>
     <div class="form-group">
         <label for="shares_cabin">Shares Cabin</label>
-        <input type="checkbox" id="shares_cabin"><br>
+        <input type="checkbox" id="shares_cabin" value="True"><br>
         <label for="break_fast">Breakfast</label>
-        <input type="checkbox" id="break_fast"><br>
+        <input type="checkbox" id="break_fast" value="True"><br>
         <label for="pool_pass">Pool Pass</label>
-        <input type="checkbox" id="pool_pass"><br>
+        <input type="checkbox" id="pool_pass" value="False"><br>
         <button type="button" onclick="selectCruise()">Select a cruise</button>
         <div id="result">Selet the cruise</div>
     </div>
@@ -30,17 +30,26 @@
 <form>
     <div class="form-group">
         <label for="days">Enter the Number of days</label>
-        <input type="text" class="form-control" id="textInput1" placeholder="Enter text 1">
+        <input type="text" class="form-control" id="days" value="days" placeholder="days">
     </div>
     <br>
     <div class="form-group">
-        <label for="textInput2">Text Input 2</label>
-        <input type="text" class="form-control" id="textInput2" placeholder="Enter text 2">
+        <label for="price">Enter price</label>
+        <input type="text" class="form-control" id="price" placeholder="Enter price">
     </div>
     <br>
-    <button type="button" class="btn btn-primary" onclick="processTextInputs()">Process Text Inputs</button>
+    <button type="button" class="btn btn-primary" onclick="updateCruise()">Update the cruise</button>
 </form>
 
+<script>
+function updateCruise(){
+    days=document.getElementById("days").value
+    price=document.getElementById("price").value
+    my_cruise["days"]=days;
+    my_cruise["price"]=price;
+    document.getElementById("result").innerHTML=JSON.stringify(my_cruise)
+    }
+</script>
 
 <script>
     var my_cruise = {};
@@ -52,7 +61,7 @@
         my_cruise.shared = shares_cabin.checked;
         my_cruise.breakfast = break_fast.checked;
         my_cruise.pool = pool_pass.checked;
-        document.getElementById("result").innerHTML = JSON.stringify(my_cruise, null, 2);
+        document.getElementById("result").innerHTML = JSON.stringify(my_cruise);
     }
 </script>
 
