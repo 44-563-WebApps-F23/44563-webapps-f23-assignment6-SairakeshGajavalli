@@ -10,37 +10,35 @@
     integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
  </head>
 <body>
-
-<h2>Sairakesh goes on a cruise</h2>
-
-
-<form>
-    <div class="form-group">
-        <label for="shares_cabin">Shares Cabin</label>
-        <input type="checkbox" id="shares_cabin" value="True"><br>
-        <label for="break_fast">Breakfast</label>
-        <input type="checkbox" id="break_fast" value="True"><br>
-        <label for="pool_pass">Pool Pass</label>
-        <input type="checkbox" id="pool_pass" value="False"><br>
-        <button type="button" onclick="selectCruise()">Select a cruise</button>
-        <div id="result">Selet the cruise</div>
-    </div>
-</form>
-
-<form>
-    <div class="form-group">
-        <label for="days">Enter the Number of days</label>
-        <input type="text" class="form-control" id="days" value="days" placeholder="days">
-    </div>
+<div class="container">
+    <h2>Sairakesh goes on a cruise</h2>
+    <form>
+        <div class="form-group">
+            <label for="shares_cabin">Shares Cabin</label>
+            <input type="checkbox" id="shares_cabin" value="True"><br>
+            <label for="break_fast">Breakfast</label>
+            <input type="checkbox" id="break_fast" value="True"><br>
+            <label for="pool_pass">Pool Pass</label>
+            <input type="checkbox" id="pool_pass" value="False"><br>
+            <button type="button" onclick="selectCruise()">Select a cruise</button>
+            <div id="result">Selet the cruise</div>
+        </div>
+    </form>
     <br>
-    <div class="form-group">
-        <label for="price">Enter price</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter price">
-    </div>
-    <br>
-    <button type="button" class="btn btn-primary" onclick="updateCruise()">Update the cruise</button>
-</form>
-
+    <form>
+        <div class="form-group">
+            <label for="days">Enter the Number of days</label>
+            <input type="text" class="form-control" id="days" value="days" placeholder="days">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="price">Enter price</label>
+            <input type="text" class="form-control" id="price" placeholder="Enter price">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" onclick="updateCruise()">Update the cruise</button>
+    </form>
+</div>
 <script>
 function updateCruise(){
     days=document.getElementById("days").value
@@ -50,7 +48,6 @@ function updateCruise(){
     document.getElementById("result").innerHTML=JSON.stringify(my_cruise)
     }
 </script>
-
 <script>
     var my_cruise = {};
     function selectCruise() {
@@ -64,6 +61,5 @@ function updateCruise(){
         document.getElementById("result").innerHTML = JSON.stringify(my_cruise);
     }
 </script>
-
 </body>
 </html> 
