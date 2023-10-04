@@ -46,22 +46,19 @@
     </div>
     <script>
     function chooseOp() {
-        var baseamount = parseFloat(document.getElementById("baseamount").value);
-        var tip_percent = parseFloat(document.getElementById("tip_percent").value);
+        var baseamount = document.getElementById("baseamount").value;
+        var tip_percent = document.getElementById("tip_percent").value;
         var selectedOperation = document.querySelector('input[name="operation"]:checked').value;
-        var result;
+        let result;
         switch (selectedOperation) {
             case "sum":
-                result = baseamount + tip_percent;
+                result = baseamount - (-tip_percent);
                 break;
             case "difference":
                 result = baseamount - tip_percent;
                 break;
             case "product":
                 result = baseamount * tip_percent;
-                break;
-            default:
-                result = "Invalid operation";
                 break;
             }
             document.getElementById("result").innerHTML = `${selectedOperation} of ${baseamount} and ${tip_percent} is ${result}`;
