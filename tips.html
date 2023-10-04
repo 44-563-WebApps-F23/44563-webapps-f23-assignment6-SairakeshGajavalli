@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Tips page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
@@ -14,10 +15,10 @@
         <h2>Sairakesh shows tip amounts</h2>
         
         <label for="baseamount">Enter base amount:</label>
-        <input type="number" id="baseamount" value="50">
+        <input type="number" id="baseamount" value="50"><br>
         <label for="tip_percent">Enter the tip percent:</label>
-        <input type="number" id="tip_percent" value="15">
-        <input type="button" value="Show tip" onclick="tips()">
+        <input type="number" id="tip_percent" value="15"><br>
+        <input type="button" class="btn btn-primary mb-3" value="Show tip" onclick="tips()">
         <div id="result1"> Tips Result will Shown here.</div>
     </div>
     <script>
@@ -32,7 +33,7 @@
         document.getElementById("result1").innerHTML = "Tips are:" + myOutput;
         }
     </script>
-    <div class="container">
+    <div class="container form-check">
         <form>
             <label for="sum">Sum</label>
             <input type="radio" id="sum" name="operation" value="sum" onclick="chooseOp()"><br>
@@ -40,7 +41,7 @@
             <input type="radio" id="difference" name="operation" value="difference" onclick="chooseOp()"><br>
             <label for="product">Product</label>
             <input type="radio" id="product" name="operation" value="product" onclick="chooseOp()"><br>
-            <div id="result">Sum, Difference and Product result will shown here.</div>
+            <div id="result">Sum,Difference and Product result will shown here.</div>
         </form>
     </div>
     <script>
